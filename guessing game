@@ -1,0 +1,22 @@
+<?php
+// Generate a random number between 1 and 100
+$targetNumber = rand(1, 100);
+
+$guess = null;
+$attempts = 0;
+while ($guess !== $targetNumber) {
+   
+    echo "Guess a number between 1 and 100: ";
+    $guess = (int) readline();
+    $attempts++;
+
+  
+    if ($guess > $targetNumber) {
+        echo "Too high! Try again.\n";
+    } elseif ($guess < $targetNumber) {
+        echo "Too low! Try again.\n";
+    }
+}
+
+echo "Congratulations! You guessed the number $targetNumber in $attempts attempts!\n";
+?>
